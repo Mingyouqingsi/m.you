@@ -1,6 +1,6 @@
 <template>
 <div class="footer-guide">
-  <span class="guide-item" :class="{on:$route.path==='/main'}" @click="goTo('/main')">
+  <span class="guide-item" :class="{on:$route.path==='/main/recommend'}" @click="goTo('/main/recommend')">
     <span class="item-icon">
       <i class="iconfont icon-tubiaozhizuomoban"></i>
     </span>
