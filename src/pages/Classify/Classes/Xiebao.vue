@@ -1,5 +1,7 @@
 <template>
-<div>Profile</div>
+<div>
+  鞋包
+</div>
 </template>
 
 <script>

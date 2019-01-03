@@ -13,4 +13,8 @@ export const reqList = () => ajax('/api/topic/v1/find/recManual.json')
 export const reqSearch = (keywordPrefix) =>ajax('/api/xhr/search/searchAutoComplete.json?csrf_token=b3562f9291acf772228f8aa617e',{keywordPrefix},'POST')
 
 
-//mock数据
+
+//mock数据 :分类列表
+export const reqNavData = () => ajax('/navdata')
+
+

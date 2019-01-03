@@ -8,6 +8,8 @@ import Shopcar from '../pages/Shopcar/Shopcar.vue'
 import Profile from '../pages/Profile/Profile.vue'
 import Recommend from '../pages/Main/page/Recommend.vue'
 import Family from '../pages/Main/page/Family.vue'
+import Jujia from  '../pages/Classify/Classes/Jujia.vue'
+import Xiebao from '../pages/Classify/Classes/Xiebao.vue'
 export default [
   {
     path : '/main',
@@ -25,7 +27,17 @@ export default [
   },
   {
     path : '/classify',
-    component : Classify
+    component : Classify,
+    children: [
+      {
+        path :'/classify/jujia',
+        component : Jujia
+      },
+      {
+        path :'/classify/xiebao',
+        component : Xiebao
+      },
+    ]
   },
   {
     path : '/watches',

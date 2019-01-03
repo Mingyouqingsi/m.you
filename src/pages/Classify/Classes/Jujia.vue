@@ -1,5 +1,7 @@
 <template>
-<div>Profile</div>
+<div>
+  居家
+</div>
 </template>
 
 <script>

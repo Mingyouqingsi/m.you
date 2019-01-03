@@ -1,23 +1,24 @@
 <template>
   <div >
+   <!-- <ul>
+      <li v-for="(item,index) in navlist" :key="index">{{item.name}}</li>
+    </ul>-->
     <keep-alive>
       <router-view/>
     </keep-alive>
     <FooterGuide/>
+
   </div>
+
 </template>
 
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
-import {reqList} from './api'
 export default {
-  async mounted () {
-    const result = await reqList()
-    console.log(result)
-  },
   components : {
     FooterGuide
-  }
+  },
+
 }
 </script>
 
