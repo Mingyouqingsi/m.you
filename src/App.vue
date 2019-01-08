@@ -1,12 +1,9 @@
 <template>
   <div >
-   <!-- <ul>
-      <li v-for="(item,index) in navlist" :key="index">{{item.name}}</li>
-    </ul>-->
     <keep-alive>
       <router-view/>
     </keep-alive>
-    <FooterGuide/>
+    <FooterGuide v-show="!this.$route.meta.Isshow"/>
 
   </div>
 
@@ -16,7 +13,7 @@
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
 export default {
   components : {
-    FooterGuide
+    FooterGuide,
   },
 
 }

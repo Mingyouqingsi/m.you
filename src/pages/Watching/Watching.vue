@@ -1,12 +1,16 @@
 <template>
-<div>
-  居家
-</div>
+  <div>
+  Watching
+  </div>
 </template>
 
 <script>
   export default{
-
+    methods: {
+      goInTo (path){
+        this.$router.push(path)
+      }
+    },
   }
 </script>
 

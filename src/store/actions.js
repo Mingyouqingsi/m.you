@@ -2,8 +2,8 @@
  * Created by 王翔 on 2019-1-2.
  */
 
-import {reqNavData } from '../api'
-import {RECEIVE_NAVLIST,RECEIVE_NAVINDEX ,RECEIVE_NAVDETAIL} from './mutation-types'
+import {reqNavData,reqTab,reqList ,reqintellList} from '../api'
+import {RECEIVE_NAVLIST,RECEIVE_TABINDEX,RECEICE_TABLIST,RECEICE_INTELLLIST} from './mutation-types'
 export default {
  async getNavdata ({commit}) {
     const result = await reqNavData()
@@ -12,14 +12,21 @@ export default {
       commit(RECEIVE_NAVLIST,{navlist})
     }
   },
-  getNavIndex({commit},index){
-   commit(RECEIVE_NAVINDEX,{index})
+ async getTab ({commit}) {
+    const result = await reqTab();
+      const tabIndex = result.data;
+      commit(RECEIVE_TABINDEX,{tabIndex})
   },
-  getNavDetail({commit}){
-   commit(RECEIVE_NAVDETAIL)
-  }
-
-
-
+ async getTabList ({commit}) {
+    const result = await reqList();
+    console.log(result)
+      const tabList = result.data;
+      commit(RECEICE_TABLIST,{tabList})
+  },
+ async getintellList ({commit},{page,size,tabId}) {
+    const result = await reqintellList({page,size,tabId});
+      const intellList = result.data.result;
+      commit(RECEICE_INTELLLIST,{intellList})
+  },
 
 }

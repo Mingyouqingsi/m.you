@@ -1,5 +1,5 @@
 <template>
-<div class="footer-guide">
+<div class="footer-guide" v-if="$route.meta.isShow">
   <span class="guide-item" :class="{on:$route.path==='/main/recommend'}" @click="goTo('/main/recommend')">
     <span class="item-icon">
       <i class="iconfont icon-tubiaozhizuomoban"></i>
@@ -53,6 +53,7 @@
     width 100%
     height 98.05px
     display flex
+    z-index 20
     .guide-item
       display flex
       flex-direction column

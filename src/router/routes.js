@@ -7,52 +7,66 @@ import Watches from '../pages/Watches/Watches.vue'
 import Shopcar from '../pages/Shopcar/Shopcar.vue'
 import Profile from '../pages/Profile/Profile.vue'
 import Recommend from '../pages/Main/page/Recommend.vue'
-import Family from '../pages/Main/page/Family.vue'
-import Jujia from  '../pages/Classify/Classes/Jujia.vue'
-import Xiebao from '../pages/Classify/Classes/Xiebao.vue'
+import Watching from '../pages/Watching/Watching.vue'
 export default [
   {
     path : '/main',
     component : Main,
+    meta : {
+      isShow:true
+    },
     children : [
       {
         path : '/main/recommend',
-        component : Recommend
-      },
-      {
-        path : '/main/family',
-        component : Family
+        component : Recommend,
+        meta : {
+          isShow:true
+        }
       },
     ]
   },
   {
     path : '/classify',
     component : Classify,
-    children: [
-      {
-        path :'/classify/jujia',
-        component : Jujia
-      },
-      {
-        path :'/classify/xiebao',
-        component : Xiebao
-      },
-    ]
+    meta : {
+      isShow:true
+    }
+
   },
   {
     path : '/watches',
-    component : Watches
+    component : Watches,
+  meta : {
+  isShow:true
+}
   },
   {
     path : '/shopcar',
-    component : Shopcar
+    component : Shopcar,
+    meta : {
+      isShow:true
+    }
   },
   {
     path : '/profile',
-    component : Profile
+    component : Profile,
+    meta : {
+      isShow:false
+    }
   },
   {
+    path : '/watching',
+    component : Watching,
+    meta : {
+      isShow:true
+    }
+  },
+
+  {
     path : '/',
-    redirect : '/main/recommend'
+    redirect : '/main/recommend',
+    meta : {
+      isShow:true
+    }
   },
 ]

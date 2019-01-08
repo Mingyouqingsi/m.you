@@ -12,10 +12,10 @@
 </div>
   <div class="wrapper">
     <div class="maintoplist">
-      <div class="tab" :class="{active:$route.path==='/recommend'}" @click="goIn('/main/recommend')">
+      <div class="tab active">
         <span class="txt">推荐</span>
       </div>
-      <div class="tab" :class="{active:$route.path==='/family'}" @click="goIn('/main/family')">
+      <div class="tab">
         <span class="txt">居家</span>
       </div>
       <div class="tab">
@@ -65,11 +65,6 @@
         click: false
       })
     },
-    methods: {
-      goIn (path){
-        this.$router.push(path)
-      }
-    }
   }
 </script>
 
@@ -135,7 +130,7 @@
         text-align center
         color #000
         font-size 28px
-      .active
+      &.active
         .txt
           color #b4282d
           border-bottom 5px solid #b4282d

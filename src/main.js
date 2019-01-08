@@ -4,8 +4,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from  './router'
 import store from './store'
+// import Intelligent from  './components/Intelligent/Intelligent.vue'
+
 import './mock/mockServer'
 
+import { Button } from 'mint-ui';
+
+Vue.component(Button.name, Button);
+// Vue.component('Intelligent',Intelligent);
 
 /* eslint-disable no-new */
 new Vue({
